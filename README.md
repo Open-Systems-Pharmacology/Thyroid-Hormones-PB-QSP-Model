@@ -85,4 +85,5 @@ The model code is distributed under the [GPLv2 License](https://github.com/Open-
 
 ## References
 [1] [Menshykau D., et al. QST Model for the Hypothalamic-PituitaryThyroid Axis in Rat and Human. QSPC 2022, Leiden, The Netherlands
+
 [2] [Pilari, S., Gaub, T., Block, M. & Görlitz, L. Development of Physiologically Based Organ Models to Evaluate the Pharmacokinetics of Drugs in the Testes and the Thyroid Gland: Development of Physiologically Based Organ Models. CPT Pharmacometrics Syst. Pharmacol. 6, 532–542 (2017).](https://pubmed.ncbi.nlm.nih.gov/28571120/)
