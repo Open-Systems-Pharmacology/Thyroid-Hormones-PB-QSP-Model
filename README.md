@@ -71,7 +71,8 @@ To run the scirpts:
 The script will perform initalization (loading of the required packages and creating a configuration object that holds information about paths to the required files) and run the different simulation scenarios. You can run the specific scenarios by manually executing the respective code lines.
 
 ## Version information
-The physiology is based on the PBPK model implemented in PK-Sim version 8.
+- The physiology is based on the PBPK model implemented in PK-Sim version 8.
+- The provided packages run with R version 3.6.
 
 ## Code of conduct
 Everyone interacting in the Open Systems Pharmacology community (codebases, issue trackers, chat rooms, mailing lists etc...) is expected to follow the Open Systems Pharmacology [code of conduct](https://github.com/Open-Systems-Pharmacology/Suite/blob/master/CODE_OF_CONDUCT.md#contributor-covenant-code-of-conduct).
