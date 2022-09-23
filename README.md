@@ -44,8 +44,31 @@ This repository contains following files:
 - `Menshykau_ThyroidHormoneTox_QSPC_poster.pdf` - poster presentation of the QSP/T model [[1](#references)].
 - `Thyroid PBPK.pksim5` - PK-Sim project file with PBPK models of implemented compounds. The project is only used for creation of the PBPK backbone that is extended in MoBi. Final parametrization for simulations is performed in supplied `R` scripts.
 - `Thyroid QSP.mbp3`: MoBi project file with implemented model structure. Final parametrization for simulations is performed in supplied `R` scripts, the results produced with parametrization stored in MoBi might not be valid.
+- `SimulationFramework` folder - R scripts and associated files required to reproduce the results. See [Running the scripts](#running-the-scripts) for details.
+- `Packages` folder - R packages required to run the provided scripts. See [Running the scripts](#running-the-scripts) for details.
 
-- `SimulationFramework` folder - 
+## Running the scripts
+
+To run the provided scirpts, you will require **R verion 3.6 (R4.x is currently not supported!)** and the packages provided in the folder `Packages`.
+- First, install dependencies from CRAN by executing
+```
+install.packages(c("R6", "stringr", "readr", "openxlsx"), dependencies = TRUE)
+```
+- Install [`rClr` version 0.9.1](https://github.com/Open-Systems-Pharmacology/rClr/releases/tag/v0.9.1-R3)
+- Install [`ospsuite` version 9.1.4](https://github.com/Open-Systems-Pharmacology/OSPSuite-R/releases/tag/v9.1.4)
+- Install `esqlabsR` version 1.1.0
+
+The provided scripts do the following:
+- Load the simulation that has been exported from MoBi to `pkml` file
+- Applies the correct parametrization from the `SimulationFramework\Parameters\Thyroid_QSP_parameters.xlsx` file
+- Set application protocols as defined in the file `SimulationFramework\Code\GeneralCode\Applications.R`
+- Run the simulations
+- Create figures comparing simulation results with observed data stored in the file `D:\SimulationFramework\Data\CompiledDataSet.xlsx` and stores the figure in `SimulationFramework\Results\`, if specified
+
+To run the scirpts:
+- Open RStudio project file `Thyroid_QSP.Rproj` located in the folder `SimulationFramework\Code\`
+- In RStudio, open file `script.R`.
+The script will perform initalization (loading of the required packages and creating a configuration object that holds information about paths to the required files) and run the different simulation scenarios. You can run the specific scenarios by manually executing the respective code lines.
 
 ## Version information
 The physiology is based on the PBPK model implemented in PK-Sim version 8.
